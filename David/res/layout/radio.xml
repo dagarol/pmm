@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+   <RadioGroup 
+       android:id="@+id/rg"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical">
+       
+       <RadioButton 
+           android:id="@+id/nadar"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="Natacion "/>
+       
+       <RadioButton 
+           android:id="@+id/baloncesto"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="Baloncesto "/>
+       
+       <RadioButton 
+           android:id="@+id/futbol"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="Futbol"/>
+       
+   </RadioGroup>
+
+
+    <TextView  
+          android:id="@+id/radiotxt"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="Has elegido: "/>
+    
+
+</LinearLayout>

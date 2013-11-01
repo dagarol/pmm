@@ -1,0 +1,9 @@
+
+
+    <menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<item android:id="@+id/opcion1" android:title="Controles Básicos" ></item>
+<item android:id="@+id/opcion2" android:title="Controles Avanzados" ></item>
+<item android:id="@+id/opcion3" android:title="Ayuda" ></item>
+</menu>
+
+
