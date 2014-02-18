@@ -71,7 +71,6 @@ class AdaptadorDestino extends ArrayAdapter<Destino> {
         AdaptadorDestino adaptador =new AdaptadorDestino(this);
 		final Spinner spinner = (Spinner)findViewById(R.id.spinner);
 		final Button boton=(Button)findViewById(R.id.boton);
-		final EditText editar=(EditText)findViewById(R.id.editar);
 		adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spinner.setAdapter(adaptador);
 		
@@ -91,14 +90,7 @@ class AdaptadorDestino extends ArrayAdapter<Destino> {
 				
 				}
 				});
-		editar.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				editar.setText("");
-				
-			}
-		});
+
 		boton.setOnClickListener(new OnClickListener()
 		{
     		public void onClick(View v) {
@@ -108,13 +100,12 @@ class AdaptadorDestino extends ArrayAdapter<Destino> {
     			final RadioButton urgente=(RadioButton)findViewById(R.id.radio2);
     			final CheckBox regalo=(CheckBox)findViewById(R.id.checkbox1);
     			final CheckBox tarjeta=(CheckBox)findViewById(R.id.checkbox2);
-    			
+    			final EditText editar=(EditText)findViewById(R.id.editar);
     			String pesoString=editar.getText().toString();
     			int peso = Integer.parseInt(pesoString);
     			double precioPeso=1;
     			String tarifa="";
     			String decoracion="";
-    			
     			
     			if(peso<6)
     			{
@@ -137,13 +128,13 @@ class AdaptadorDestino extends ArrayAdapter<Destino> {
 					tarifa="normal";
 					
 				}
-    			else if(urgente.isChecked())
+    			
+    			if(urgente.isChecked())
     			{
     				precioTotal=precioPeso+precio;
     				precioTotal=precioTotal+precioTotal*0.30;
     				tarifa="urgente";
     			}
-    			
     			if(regalo.isChecked() && tarjeta.isChecked())
     			{
     				decoracion="caja regalo y dedicatoria";
@@ -186,7 +177,7 @@ class AdaptadorDestino extends ArrayAdapter<Destino> {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-	//ONOPTIONSITEMSELECTED sirve para aÃ±adir acciones a los items de los menÃºs
+	//ONOPTIONSITEMSELECTED sirve para añadir acciones a los items de los menús
 	public boolean onOptionsItemSelected(MenuItem item) 
 	{ 
 		switch (item.getItemId()) 
