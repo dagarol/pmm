@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".VerCentros" >
+   
+    <Spinner android:id="@+id/centros"       
+    android:prompt="@+id/centros"   
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:scrollbars="vertical" />
+   
+    <Button android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:text="Insertar"
+    android:id="@+id/insertar"
+    android:layout_alignParentBottom="true"
+    android:layout_weight="1"/>
+   
+    <Button android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_toRightOf="@+id/insertar"
+    android:text="Borrar"
+    android:id="@+id/borrar"
+    android:layout_alignParentBottom="true"
+    android:layout_weight="1"/>
+    
+    <Button android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_toRightOf="@+id/borrar"
+    android:id="@+id/estadistica"
+    android:text="Estadistica"
+    android:layout_alignParentBottom="true"
+    android:layout_weight="1"/>
+
+</RelativeLayout>
